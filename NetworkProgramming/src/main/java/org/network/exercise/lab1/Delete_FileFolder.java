@@ -1,8 +1,8 @@
-package org.network;
+package org.network.exercise.lab1;
 
 import java.io.File;
 
-public class Exercise1 {
+public class Delete_FileFolder {
     /**
      * Delete file and/or directory in the specified directory tree.
      *
@@ -30,6 +30,6 @@ public class Exercise1 {
 
     public static void main(String[] args) {
         String path = "E:\\WareHouse";
-        System.out.println(new Exercise1().delete(path, true));
+        System.out.println(new Delete_FileFolder().delete(path, true));
     }
 }
