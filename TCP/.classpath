@@ -6,12 +6,11 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ucanaccess"/>
-	<classpathentry kind="src" path="practical"/>
-	<classpathentry kind="src" path="demo"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/Download/UCanAccess-5.0.1.bin/ucanaccess-5.0.1.jar"/>
 	<classpathentry kind="lib" path="D:/Download/UCanAccess-5.0.1.bin/lib/hsqldb-2.5.0.jar"/>
 	<classpathentry kind="lib" path="D:/Download/UCanAccess-5.0.1.bin/lib/jackcess-3.0.1.jar"/>
 	<classpathentry kind="lib" path="D:/Download/UCanAccess-5.0.1.bin/lib/commons-lang3-3.8.1.jar"/>
 	<classpathentry kind="lib" path="D:/Download/UCanAccess-5.0.1.bin/lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="D:/Download/UCanAccess-5.0.1.bin/ucanaccess-5.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
