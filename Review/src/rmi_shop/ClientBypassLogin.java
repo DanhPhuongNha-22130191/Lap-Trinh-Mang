@@ -62,7 +62,6 @@ public class ClientBypassLogin {
 
 	private String logout() throws RemoteException {
 		server.logout(sessionId);
-		server.dbClose();
 		return "OK: logout successfully!";
 
 	}
