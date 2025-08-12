@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Dao {
 	private final String DRIVER = "net.ucanaccess.jdbc.UcanaccessDriver";
-	private final String DB_PATH = "D:\\Programmings\\Eclipse\\Lap-Trinh-Mang\\Review\\src\\SanPham.accdb";
+	private final String DB_PATH ="E:\\Thi\\Database1.accdb";
 	private final String URL = "jdbc:ucanaccess://" + DB_PATH;
 	private Connection connection;
 
@@ -106,16 +106,16 @@ public class Dao {
 	}
 
 	public List<Product> viewProducts(String partOfName) {
-		String sql = "SELECT * FROM SanPham WHERE ten_san_pham LIKE ?";
+		String sql = "SELECT * FROM sanpham WHERE name LIKE ?";
 		List<Product> list = new ArrayList<Product>();
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
 			stmt.setString(1, "%" + partOfName + "%");
 			try (ResultSet rs = stmt.executeQuery()) {
 				while (rs.next()) {
 					int productId = rs.getInt("idsp");
-					String name = rs.getString("ten_san_pham");
-					int count = rs.getInt("so_luong");
-					double price = rs.getDouble("gia_ban");
+					String name = rs.getString("name");
+					int count = rs.getInt("sl");
+					double price = rs.getDouble("price");
 					list.add(new Product(productId, name, count, price));
 				}
 			}
@@ -123,5 +123,13 @@ public class Dao {
 			e.printStackTrace();
 		}
 		return list;
+	}
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+        Dao dao = new Dao();
+        for (Product p : dao.viewProducts("e")) {
+            System.out.println(p);
+        }
+
 	}
 }
