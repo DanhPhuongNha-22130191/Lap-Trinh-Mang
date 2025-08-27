@@ -33,9 +33,9 @@ Nó đóng vai trò trung tâm cho:
 ## 📂 3. Cấu trúc thư mục
 
 ```bash
-src/
-├── api/              # 🌐 Controller & route: định nghĩa endpoint
-├── application/      # ⚙️ Service layer: xử lý logic ứng dụng
-├── domain/           # 📦 Business logic & entity chính
-├── infrastructure/   # 🗄️ Repository, kết nối DB, cấu hình hệ thống
-├── shared/           # 🛠️ Helper, utils, constants dùng chung
+com.ecomhub.cartservice/
+├── adapters/          # Controller: định nghĩa endpoint
+├── application/      #  Service layer: xử lý logic ứng dụng
+├── domain/           #  Business logic & entity chính
+├── infrastructure/   #  Repository, kết nối DB, cấu hình hệ thống
+├── shared/           #  Helper, utils, constants dùng chung
